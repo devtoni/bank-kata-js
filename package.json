@@ -1,0 +1,27 @@
+{
+  "name": "starter-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ",
+    "test:watch": "mocha ./test/**/*Spec.js -w --require babel-register"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-sui": "1.8.0",
+    "babel-register": "6.26.0",
+    "chai": "4.1.2",
+    "chai-spies": "1.0.0",
+    "mocha": "5.2.0",
+    "sinon": "6.1.5"
+  },
+  "babel": {
+    "presets": [
+      "sui"
+    ]
+  }
+}
