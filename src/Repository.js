@@ -6,18 +6,21 @@ export default class Repository {
     this._transaction = transaction;
     this._clock = clock;
   }
-  add = (amount) => {
+  add (amount) {
     this._transactions = [
       ...this._transactions,
       new Transaction({ date: this._clock.getCurrentDate(), amount })
     ];
   }
 
-  withdraw() {
-    throw new Error("Repository#withdraw is not implemented");
+  withdraw(amount) {
+    this._transactions = [
+      ...this._transactions,
+      new Transaction({ date: this._clock.getCurrentDate(), amount: -amount })
+    ];
   }
 
   getAllTransactions() {
-      return this._transactions
+      return [...this._transactions]
   }
 }
