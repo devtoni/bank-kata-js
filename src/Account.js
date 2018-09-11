@@ -15,7 +15,7 @@ export default class Account {
   }
 
   printStatement() {
-    this._printer.printLine(HEADER);
+    this._printer.printLine(HEADER)
     const transactions = this._repository.getAllTransactions();
     transactions
       .map(transactionVO => transactionVO.toJSON())
@@ -35,11 +35,7 @@ export default class Account {
         (transactionA, transactionB) => transactionA.date < transactionB.date
       )
       .forEach(transaction => {
-        this._printer.printLine(
-          `${transaction.date} | ${transaction.amount}.00 | ${
-            transaction.balance
-          }.00`
-        );
+        this._printer.printLine(transaction);
       });
   }
 }

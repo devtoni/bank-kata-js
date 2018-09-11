@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import sinon from 'sinon'
 import Clock from '../src/Clock'
 
-describe.only('ClockSpec', () => {
+describe('ClockSpec', () => {
   let fakeTimer
   beforeEach(() => {
     fakeTimer = sinon.useFakeTimers(new Date(2018, 8, 12))
