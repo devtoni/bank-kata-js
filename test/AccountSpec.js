@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import sinon from "sinon";
-import Repository from "../src/Repository";
+import Repository from "../src/BankTransactionRepository";
 import Printer from "../src/Printer";
 import Account from "../src/Account";
 import Transaction from "../src/Transaction";
@@ -39,8 +39,8 @@ describe("Account test", () => {
   it("should print the statement", () => {
     const transaction = new Transaction({ date: "10/04/2018", amount: 500 });
     mockedRepository.expects("getAllTransactions").returns([transaction]);
-   
-  
+
+
     mockedPrinter
       .expects("printLine")
       .withArgs('DATE | AMOUNT | BALANCE');

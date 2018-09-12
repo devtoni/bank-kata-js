@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import sinon from 'sinon'
-import Repository from '../src/Repository'
+import Repository from '../src/BankTransactionRepository'
 import Transaction from '../src/Transaction'
 import Clock from '../src/Clock'
 
